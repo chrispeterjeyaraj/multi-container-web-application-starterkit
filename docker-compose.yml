@@ -1,0 +1,115 @@
+#################################################################################
+# This docker manifesto holds the containers we want to build for the application
+#################################################################################
+
+# There are mainly 4 containers
+# a. Frontend - Has the react application
+# b. backend - Go API's router using Gorrilla mux
+# c. CORS - NGINX cors reverse proxy server to avoid CORS issue
+# d. Mongo - NO SQL database
+#   d.1 Mongo Express - UI to manage the database
+
+# Swagger and MongoSeed setup is commented. If you want enable them. And it just work :)
+
+version: "3.9"
+
+services:
+
+    # Frontend container
+    templatefrontend:
+        container_name: template-frontend
+        image: template-frontend
+        build:
+            context: ./frontend
+            target: development
+        stdin_open: true
+        volumes:
+             - ./frontend/src:/templatefrontend/src
+        networks:
+            - template-compose-network
+        links:
+            - templateserver
+        ports:
+            - 3000:3000
+
+    # Backend container
+    templateserver:
+        container_name: template-server
+        image: template-server
+        build:
+            context: ./backend
+            target: development
+        volumes:
+            - ./backend:/templateserver
+        networks:
+            - template-compose-network
+        links:
+            - mongo
+        ports:
+            - '4000:4000'
+
+    # CORS setup
+    cors:
+        build:
+            context: ./backend/nginx
+            dockerfile: Dockerfile
+        container_name: cors
+        networks:
+           - template-compose-network
+        depends_on:
+            - templateserver
+        ports:
+            - "4545:80"
+
+    # swagger-ui:
+    #     image: swaggerapi/swagger-ui
+    #     ports:
+    #         - 4001:4001
+    #     environment:
+    #         - API_URL
+    #     networks:
+    #         - template-compose-network
+
+    # Mongo container
+    mongo:
+        image: mongo:4
+        volumes:
+            - ./data:/data/db
+        networks:
+            - template-compose-network
+        ports:
+            - '27017:27017'
+
+    mongo_seed:
+        env_file:
+            - ./backend/.env
+        container_name: mongo_seed
+        build:
+            context: ./backend/mongo_seed
+            dockerfile: Dockerfile
+            args:
+                - DATABASE_URI=$MONGOURI
+        networks:
+            - template-compose-network
+        depends_on:
+            - mongo
+
+    # Mongo Express container
+    mongo-express:
+        image: mongo-express
+        environment:
+            - ME_CONFIG_MONGODB_SERVER=mongo
+            - ME_CONFIG_MONGODB_PORT=27017
+        depends_on:
+            - mongo
+        networks:
+            - template-compose-network
+        ports:
+             - '8081:8081'
+        volumes:
+            - ./data:/data/db
+
+networks:
+  template-compose-network:
+    driver: bridge
+

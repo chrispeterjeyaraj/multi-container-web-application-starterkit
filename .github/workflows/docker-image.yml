@@ -1,0 +1,26 @@
+name: Template Docker CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build the Template Backend Docker image
+        run: cd backend && docker build . --file Dockerfile --tag template-backend:$(date +%s)
+
+      - uses: actions/checkout@v3
+      - name: Build the Template FrontEnd Docker image
+        run: cd frontend && docker build . --file Dockerfile --tag template-frontend:$(date +%s)
+
+      - uses: actions/checkout@v3
+      - name: Build the Template CORS Docker image
+        run: cd backend && docker build . --file Dockerfile --tag template-cors:$(date +%s)

@@ -1,0 +1,159 @@
+{
+	"info": {
+		"_postman_id": "074fb838-f0d3-48f1-9d24-63b7111b93ea",
+		"name": "ExamCenter",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23905583"
+	},
+	"item": [
+		{
+			"name": "http://localhost:4000/signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Email\": \"mailtochrisnow@gmail.com\",\r\n    \"Password\": \"chris\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/signin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"First_name\": \"Chris\",\r\n    \"Last_name\": \"Peter\",\r\n    \"Email\": \"mailtochrisnow@gmail.com\",\r\n    \"Password\": \"chris\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/createexam",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Examname\": \"TestExam1\",\r\n    \"Category\": \"Test\",\r\n    \"Status\": \"active\",\r\n    \"Examownerid\": \"634d6db4586ebc57da87b6fa\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/createexam",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"createexam"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/getexam/634e4a84bb66da10961d9734",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Examname\": \"TestExam1\",\r\n    \"Category\": \"Test\",\r\n    \"Status\": \"active\",\r\n    \"Examownerid\": \"634d6db4586ebc57da87b6fa\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/getexam/634e4a84bb66da10961d9734",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"getexam",
+						"634e4a84bb66da10961d9734"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/getallexams",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Examname\": \"TestExam1\",\r\n    \"Category\": \"Test\",\r\n    \"Status\": \"active\",\r\n    \"Examownerid\": \"634d6db4586ebc57da87b6fa\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/getallexams",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"getallexams"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:4000/deleteexam/634e4a84bb66da10961d9734",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Examname\": \"TestExam1\",\r\n    \"Category\": \"Test\",\r\n    \"Status\": \"active\",\r\n    \"Examownerid\": \"634d6db4586ebc57da87b6fa\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:4000/deleteexam/634e4a84bb66da10961d9734",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"deleteexam",
+						"634e4a84bb66da10961d9734"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
