@@ -1,4 +1,4 @@
-# server-ui-container-boilerplate
+# multi-container-web-application-boilerplate
 # Multi-Container Web Application with Docker
 
 This repository contains a multi-container web application built using Docker, with separate containers for the server, UI, and MongoDB for data storage. The server-side code is written in Golang, and the user interface is developed using React. This setup allows you to easily deploy and manage the various components of your web application as isolated containers.
@@ -77,8 +77,8 @@ UI -> http://localhost:3000
 
 ## CI/CD Pipeline
 
-- GO CI for API code -> Action Name -> [![Go](https://github.com/chrispeterjeyaraj/server-ui-container-boilerplate/actions/workflows/go.yml/badge.svg)](https://github.com/chrispeterjeyaraj/server-ui-container-boilerplate/actions/workflows/go.yml)
+- GO CI for API code -> Action Name -> [![Go](https://github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/actions/workflows/go.yml/badge.svg)](https://github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/actions/workflows/go.yml)
 
-- Node CI for UI Code -> [![Node.js CI](https://github.com/chrispeterjeyaraj/server-ui-container-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/chrispeterjeyaraj/server-ui-container-boilerplate/actions/workflows/node.js.yml)
+- Node CI for UI Code -> [![Node.js CI](https://github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/actions/workflows/node.js.yml/badge.svg)](https://github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/actions/workflows/node.js.yml)
 
-- Docker CI -> [![Exam Center Docker CI](https://github.com/chrispeterjeyaraj/server-ui-container-boilerplate/actions/workflows/docker-image.yml/badge.svg)](https://github.com/chrispeterjeyaraj/server-ui-container-boilerplate/actions/workflows/docker-image.yml)
+- Docker CI -> [![Exam Center Docker CI](https://github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/actions/workflows/docker-image.yml/badge.svg)](https://github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/actions/workflows/docker-image.yml)

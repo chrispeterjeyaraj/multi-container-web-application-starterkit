@@ -1,7 +1,7 @@
 package routes
 
 import (
-	controllers "github.com/chrispeterjeyaraj/server-ui-container-boilerplate/backend/pkg/controllers/todos"
+	controllers "github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/backend/pkg/controllers/todos"
 
 	"github.com/gorilla/mux"
 )

@@ -1,4 +1,4 @@
-module github.com/chrispeterjeyaraj/server-ui-container-boilerplate/backend
+module github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/backend
 
 go 1.19
 

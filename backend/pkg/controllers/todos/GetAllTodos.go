@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	database "github.com/chrispeterjeyaraj/server-ui-container-boilerplate/backend/database"
+	database "github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/backend/database"
 )
 
 func GetAllTodos(response http.ResponseWriter, request *http.Request) {

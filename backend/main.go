@@ -4,8 +4,8 @@ import (
 	"log"
 	"net/http"
 
-	"github.com/chrispeterjeyaraj/server-ui-container-boilerplate/backend/configs"
-	"github.com/chrispeterjeyaraj/server-ui-container-boilerplate/backend/pkg/routes"
+	"github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/backend/configs"
+	"github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/backend/pkg/routes"
 
 	"github.com/gorilla/mux"
 )
