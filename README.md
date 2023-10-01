@@ -49,27 +49,14 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Thank you for choosing our multi-container web application template. I hope this setup simplifies the development and deployment of your server and UI components, along with MongoDB as your data store. If you have any questions or need assistance, feel free to reach out. Happy coding!
 
 
-[Tech Stack](#Tech) |
-[Pre-requisites](#prerequisites) |
-[Basic commands](#Basic-commands-to-run-the-containers) |
-[Database diagram](#Database-diagram)
-
-## Tech
-- Docker for creating containers for UI, Server and DB
-- React for user interface and visualization
-- Go for backend APIs
-- Mongo for DB
-
-## Prerequisites
-- Docker (LTS)
-- NodeJS (LTS)
-- MongoDB (LTS)
-- Go Compiler (1.19.2)
-
-## Basic commands to run the application
+## To setup the containers and run the applications
 
 ```sh
 sudo docker compose up [--build]
+```
+
+## For accessing the applications
+```sh
 api1 -> http://localhost:4000 [non cors]
 api2 -> http://localhost:4545 [cors] [use with web application]
 mongo express -> http://localhost:8081
