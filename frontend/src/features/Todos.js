@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getRequest } from '../app/axiosClient';
+import { getRequest } from '../app/AxiosClient';
 
 /**
  * Component for rendering a list of todos.
