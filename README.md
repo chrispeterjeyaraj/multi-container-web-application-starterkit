@@ -48,14 +48,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Thank you for choosing our multi-container web application template. I hope this setup simplifies the development and deployment of your server and UI components, along with MongoDB as your data store. If you have any questions or need assistance, feel free to reach out. Happy coding!
 
-
-## To setup the containers and run the applications
-
-```sh
-sudo docker compose up [--build]
-```
-
-## For accessing the applications
+## Application URL's (will change as per declaration in docker compose)
 ```sh
 api1 -> http://localhost:4000 [non cors]
 api2 -> http://localhost:4545 [cors] [use with web application]
