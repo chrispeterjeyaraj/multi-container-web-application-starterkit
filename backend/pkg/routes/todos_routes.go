@@ -8,5 +8,4 @@ import (
 
 func TodosRoute(router *mux.Router) {
 	router.HandleFunc("/gettodos", controllers.GetAllTodos)
-
 }
