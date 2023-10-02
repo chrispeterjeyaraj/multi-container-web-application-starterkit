@@ -6,8 +6,8 @@ import (
 
 	"go.mongodb.org/mongo-driver/bson"
 
-	"github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/backend/configs"
-	models "github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/backend/pkg/models"
+	"github.com/chrispeterjeyaraj/multi-container-web-application-starterkit/backend/configs"
+	models "github.com/chrispeterjeyaraj/multi-container-web-application-starterkit/backend/pkg/models"
 )
 
 func GetAllTodos(CollectionName string) (bool, []models.Todo) {

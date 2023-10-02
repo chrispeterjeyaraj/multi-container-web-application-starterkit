@@ -1,4 +1,4 @@
-module github.com/chrispeterjeyaraj/multi-container-web-application-boilerplate/backend
+module github.com/chrispeterjeyaraj/multi-container-web-application-starterkit/backend
 
 go 1.19
 
